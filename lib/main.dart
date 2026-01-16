@@ -16,13 +16,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
        providers: [
-        ChangeNotifierProvider(
+      ChangeNotifierProvider(
           create: (context) => ProductProvider(
             repository: ProductRepositoryImpl(
-              apiservice: ProductApiService(),
-            )
-            )..loadProducts() //! this fetches data immediately app starts
-          )
+
+              apiService: ProductApiService(), 
+            ),
+          )..loadProducts(),
+        ),
        ],
     );
   }

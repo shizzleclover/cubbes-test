@@ -1,0 +1,61 @@
+Launching lib\main.dart on Chrome in debug mode...
+lib/main.dart:22:15: Error: No named parameter with the name 'apiservice'.
+              apiservice: ProductApiService(),
+              ^^^^^^^^^^
+lib/data/repository/product_repository_impl.dart:5:7: Context: The class 'ProductRepositoryImpl' has a constructor that    
+takes no arguments.
+class ProductRepositoryImpl implements ProductRepository {
+      ^
+Waiting for connection from debug service on Chrome...             17.5s
+Failed to compile application.
+
+//RSOD
+══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+The following assertion was thrown building SingleChildBuilder(dirty):
+Assertion failed:
+file:///C:/Users/USER/AppData/Local/Pub/Cache/hosted/pub.dev/provider-6.1.5+1/lib/src/inherited_provider.dart:161:7
+builder != null || child != null
+"ChangeNotifierProvider<ProductProvider> used outside of MultiProvider must specify a child"
+
+The relevant error-causing widget was:
+  SingleChildBuilder
+  SingleChildBuilder:file:///C:/Users/USER/AppData/Local/Pub/Cache/hosted/pub.dev/provider-6.1.5+1/lib/src/provider.dart:16
+  7:9
+
+When the exception was thrown, this was the stack:
+dart-sdk/lib/_internal/js_dev_runtime/private/ddc_runtime/errors.dart 274:3  throw_
+dart-sdk/lib/_internal/js_dev_runtime/private/ddc_runtime/errors.dart 44:3   assertFailed
+package:provider/src/inherited_provider.dart 161:31                          [_buildWithChild]
+package:provider/src/provider.dart 154:25                                    <fn>
+package:provider/src/provider.dart 168:48                                    <fn>
+package:nested/nested.dart 361:19                                            buildWithChild
+package:nested/nested.dart 277:21                                            build
+package:flutter/src/widgets/framework.dart 5723:15                           performRebuild
+package:flutter/src/widgets/framework.dart 5435:7                            rebuild
+package:flutter/src/widgets/framework.dart 5705:5                            [_firstBuild]
+package:flutter/src/widgets/framework.dart 5699:5                            mount
+package:nested/nested.dart 222:11                                            mount
+...     Normal element mounting (7 frames)
+package:nested/nested.dart 187:11                                            mount
+...     Normal element mounting (7 frames)
+package:nested/nested.dart 222:11                                            mount
+...     Normal element mounting (69 frames)
+package:flutter/src/widgets/framework.dart 4548:15                           inflateWidget
+package:flutter/src/widgets/framework.dart 4004:18                           updateChild
+package:flutter/src/widgets/view.dart 481:16                                 [_updateChild]
+package:flutter/src/widgets/view.dart 504:5                                  mount
+...     Normal element mounting (15 frames)
+package:flutter/src/widgets/framework.dart 4548:15                           inflateWidget
+package:flutter/src/widgets/framework.dart 4004:18                           updateChild
+package:flutter/src/widgets/binding.dart 1716:16                             [_rebuild]
+package:flutter/src/widgets/binding.dart 1685:5                              mount
+package:flutter/src/widgets/binding.dart 1638:16                             <fn>
+package:flutter/src/widgets/framework.dart 3046:11                           buildScope
+package:flutter/src/widgets/binding.dart 1637:12                             attach
+package:flutter/src/widgets/binding.dart 1376:26                             attachToBuildOwner
+package:flutter/src/widgets/binding.dart 1361:5                              attachRootWidget
+package:flutter/src/widgets/binding.dart 1347:7                              <fn>
+dart-sdk/lib/_internal/js_dev_runtime/private/isolate_helper.dart 47:11      internalCallback
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+The Flutter DevTools debugger and profiler on Chrome is available at:

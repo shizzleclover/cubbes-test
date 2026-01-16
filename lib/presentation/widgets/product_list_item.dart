@@ -37,7 +37,7 @@ class ProductListItem extends StatelessWidget {
         ),
 
         subtitle: Text(
-          product.price.toStingAsFixed(2),
+          product.price.toStringAsFixed(2),
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.black,
