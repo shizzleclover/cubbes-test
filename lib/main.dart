@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         ),
       )..loadProducts(),
       child: MaterialApp(
-        title: 'Clean Store',
+        title: 'Cubbes Store Test',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
