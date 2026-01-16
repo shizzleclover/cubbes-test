@@ -22,7 +22,7 @@ class ProductDetailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 1. Large Product Image
+            
             Container(
               height: 300,
               width: double.infinity,
@@ -36,13 +36,13 @@ class ProductDetailScreen extends StatelessWidget {
             
             const SizedBox(height: 16),
 
-            // Container for text details
+             
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // 2. Title
+                 
                   Text(
                     product.title,
                     style: const TextStyle(
@@ -53,11 +53,11 @@ class ProductDetailScreen extends StatelessWidget {
                   
                   const SizedBox(height: 8),
 
-                  // 3. Rating & Price Row
+                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // Rating
+                   
                       Row(
                         children: [
                           const Icon(Icons.star, color: Colors.amber, size: 24),
@@ -71,7 +71,7 @@ class ProductDetailScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      // Price
+                     
                       Text(
                         '\$${product.price.toStringAsFixed(2)}',
                         style: const TextStyle(
@@ -85,12 +85,12 @@ class ProductDetailScreen extends StatelessWidget {
 
                   const SizedBox(height: 24),
 
-                  // 4. Action Buttons (UI Only)
+                  
                   Row(
                     children: [
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () {}, // No functionality required
+                          onPressed: () {},  
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blue,
                             foregroundColor: Colors.white,
@@ -105,7 +105,7 @@ class ProductDetailScreen extends StatelessWidget {
                       const SizedBox(width: 16),
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () {}, // No functionality required
+                          onPressed: () {},  
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green,
                             foregroundColor: Colors.white,
@@ -122,7 +122,7 @@ class ProductDetailScreen extends StatelessWidget {
 
                   const SizedBox(height: 24),
 
-                  // 5. Description
+                 
                   const Text(
                     "Description",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -133,7 +133,7 @@ class ProductDetailScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.grey[800],
-                      height: 1.5, // Better readability
+                      height: 1.5, 
                     ),
                   ),
                   const SizedBox(height: 32),

@@ -18,12 +18,12 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Consumer<ProductProvider>(
         builder: (context, provider, child) {
-          // 1. Handle Loading State
+       
           if (provider.isLoading) {
             return const Center(child: CircularProgressIndicator());
           }
 
-          // 2. Handle Error State
+           
           if (provider.errorMessage != null) {
             return Center(
               child: Column(
@@ -41,20 +41,20 @@ class HomeScreen extends StatelessWidget {
             );
           }
 
-          // 3. Handle Success State (Show Data)
+           
           if (provider.products.isEmpty) {
             return const Center(child: Text('No products found.'));
           }
 
           return ListView.builder(
-            itemCount: provider.products.length + 1, // +1 for the Header
+            itemCount: provider.products.length + 1,  
             itemBuilder: (context, index) {
-              // The first item is the Header Image
+            
               if (index == 0) {
                 return _buildHeader();
               }
 
-              // The rest are product items (index - 1 because of header)
+              
               final product = provider.products[index - 1];
               return ProductListItem(product: product);
             },
@@ -69,9 +69,9 @@ class HomeScreen extends StatelessWidget {
       height: 200,
       margin: const EdgeInsets.only(bottom: 16),
       width: double.infinity,
-      color: Colors.grey[300], // Placeholder color
+      color: Colors.grey[300], 
       child: Image.network(
-        // Using a random placeholder image as per requirements
+        
         'https://picsum.photos/800/400', 
         fit: BoxFit.cover,
         errorBuilder: (context, error, stackTrace) => const Center(

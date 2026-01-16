@@ -29,7 +29,7 @@ class ProductListItem extends StatelessWidget {
           padding: const EdgeInsets.all(12),
           child: Row(
             children: [
-              // 1. Image Container (Fixed Size 50x50)
+              
               Container(
                 width: 50,
                 height: 50,
@@ -43,9 +43,7 @@ class ProductListItem extends StatelessWidget {
                 ),
               ),
               
-              const SizedBox(width: 12), // Spacing
-
-              // 2. Title and Price (Flexible width)
+              const SizedBox(width: 12), 
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,7 +70,7 @@ class ProductListItem extends StatelessWidget {
                 ),
               ),
 
-              // 3. Arrow Icon
+           
               const Icon(Icons.chevron_right, color: Colors.grey),
             ],
           ),

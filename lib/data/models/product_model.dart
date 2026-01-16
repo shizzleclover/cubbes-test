@@ -15,7 +15,7 @@ class ProductModel extends Product {
     return ProductModel(
       id: json['id'],
       title: json['title'],
-      // JSON numbers can be int or double, so we safely convert to double
+      
       price: (json['price'] as num).toDouble(),
       description: json['description'],
       category: json['category'],
