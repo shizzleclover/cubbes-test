@@ -1,14 +1,17 @@
+import 'package:cubbestest/data/models/product_model.dart';
+
 class ProductApiService {
-  Future<void> fetchProducts() async {
-    String baseUrl = "https://fakestoreapi.com/docs /products";
+  final String baseUrl = 'https://fakestoreapi.com';
 
-    try {
-      await Future.delayed(const Duration(seconds: 5));
+  Future<List<ProductModel>> fetchProducts() async {
+    try{
+      final response = await http.get(Uri.parse('$baseUrl/products'));
 
-    }
-    catch(e) {
-      throw Exception('Failed to load products Please retry again.');
-      )
+      if(response.statusCode == 200) {
+        final List<dynamic> jsonList = json.decode(response.body);
+
+        
+      }
     }
   }
 }
